@@ -1,0 +1,378 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Praktijk Helderheid — Holistische begeleiding in Megen</title>
+  <meta name="description" content="Praktijk Helderheid biedt holistische massage, reiki, thetahealing en persoonlijke begeleiding in Megen. Behandelaar: Olga van Vugt.">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            cream: '#F8F7F5',
+            greige: '#C4B5A8',
+            greylight: '#E8E4DF',
+            greymid: '#9CA3AF',
+            textdark: '#2D3748',
+            textmid: '#6B7280',
+          },
+          fontFamily: {
+            serif: ['Lora', 'Georgia', 'serif'],
+            sans: ['Raleway', 'sans-serif'],
+          },
+          boxShadow: {
+            soft: '0 2px 12px rgba(0,0,0,0.06), 0 1px 3px rgba(0,0,0,0.04)',
+            card: '0 4px 24px rgba(0,0,0,0.07), 0 1px 4px rgba(0,0,0,0.04)',
+          }
+        }
+      }
+    }
+  </script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Lora:wght@400;500;600;700&family=Raleway:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <script defer src="https://analytics.code-lieshout.nl/script.js" data-website-id="7999a3f9-a696-4855-9363-f0f0f792765e"></script>
+  <style>
+    body { font-family: 'Raleway', sans-serif; background-color: #F8F7F5; color: #2D3748; }
+    h1,h2,h3,h4 { font-family: 'Lora', serif; }
+    .hero-overlay { background: linear-gradient(to bottom, rgba(248,247,245,0.15) 0%, rgba(248,247,245,0.65) 60%, rgba(248,247,245,1) 100%); }
+    .nav-link { transition: color 0.2s; }
+    .nav-link:hover { color: #C4B5A8; }
+    .btn-primary { background: #C4B5A8; color: #2D3748; border-radius: 2px; padding: 14px 32px; font-family: 'Raleway', sans-serif; font-weight: 500; letter-spacing: 0.08em; text-transform: uppercase; font-size: 0.8rem; transition: background 0.2s, transform 0.2s; display: inline-block; }
+    .btn-primary:hover { background: #B4A498; transform: translateY(-1px); }
+    .btn-outline { border: 1px solid #C4B5A8; color: #6B7280; border-radius: 2px; padding: 13px 32px; font-family: 'Raleway', sans-serif; font-weight: 500; letter-spacing: 0.08em; text-transform: uppercase; font-size: 0.8rem; transition: all 0.2s; display: inline-block; }
+    .btn-outline:hover { background: #F0EBE6; transform: translateY(-1px); }
+    .service-card { background: #fff; border-radius: 8px; box-shadow: 0 2px 12px rgba(0,0,0,0.06); transition: transform 0.25s, box-shadow 0.25s; }
+    .service-card:hover { transform: translateY(-4px); box-shadow: 0 8px 32px rgba(0,0,0,0.1); }
+    .review-card { background: #fff; border-radius: 8px; box-shadow: 0 2px 12px rgba(0,0,0,0.05); padding: 2rem; }
+    .fade-in { opacity: 0; transform: translateY(20px); transition: opacity 0.6s ease, transform 0.6s ease; }
+    .fade-in.visible { opacity: 1; transform: translateY(0); }
+    /* Mobile menu */
+    #mobile-menu { display: none; }
+    #mobile-menu.open { display: flex; }
+  </style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav class="fixed top-0 left-0 right-0 z-50 bg-cream/95 backdrop-blur-sm border-b border-greylight">
+  <div class="max-w-5xl mx-auto px-6 flex items-center justify-between h-16">
+    <a href="index.html" class="flex items-center gap-3">
+      <img src="images/transparent_logo.png" alt="Helderheid logo" class="h-9 w-auto">
+    </a>
+    <!-- Desktop nav -->
+    <div class="hidden md:flex items-center gap-8 text-sm font-medium tracking-widest uppercase text-textmid">
+      <a href="index.html" class="nav-link text-textdark">Home</a>
+      <a href="over-mij.html" class="nav-link">Over mij</a>
+      <a href="diensten.html" class="nav-link">Diensten</a>
+      <a href="tarieven.html" class="nav-link">Tarieven</a>
+      <a href="blog.html" class="nav-link">Blog</a>
+      <a href="contact.html" class="btn-primary">Contact</a>
+    </div>
+    <!-- Hamburger -->
+    <button id="menu-btn" class="md:hidden p-2" aria-label="Menu">
+      <svg class="w-6 h-6 text-textdark" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
+      </svg>
+    </button>
+  </div>
+  <!-- Mobile menu -->
+  <div id="mobile-menu" class="flex-col bg-cream border-t border-greylight px-6 py-4 gap-4 text-sm font-medium tracking-widest uppercase text-textmid">
+    <a href="index.html" class="nav-link py-2">Home</a>
+    <a href="over-mij.html" class="nav-link py-2">Over mij</a>
+    <a href="diensten.html" class="nav-link py-2">Diensten</a>
+    <a href="tarieven.html" class="nav-link py-2">Tarieven</a>
+    <a href="blog.html" class="nav-link py-2">Blog</a>
+    <a href="contact.html" class="nav-link py-2">Contact</a>
+  </div>
+</nav>
+
+<!-- HERO -->
+<section class="relative min-h-screen flex items-end pb-24 overflow-hidden">
+  <div class="absolute inset-0">
+    <img src="images/20230806_113402.jpg" alt="Praktijk Helderheid" class="w-full h-full object-cover object-center" loading="eager">
+    <div class="hero-overlay absolute inset-0"></div>
+  </div>
+  <div class="relative max-w-5xl mx-auto px-6 w-full">
+    <p class="text-greige tracking-[0.2em] uppercase text-xs font-medium mb-4 fade-in">Praktijk Helderheid · Megen</p>
+    <h1 class="font-serif text-4xl md:text-6xl text-textdark leading-tight mb-6 fade-in" style="max-width:640px">
+      Ontspanning als basis<br>voor vitaliteit<br>en gezondheid
+    </h1>
+    <p class="text-textmid text-lg font-light leading-relaxed mb-10 fade-in" style="max-width:520px">
+      Wanneer het lichaam tot rust komt,<br>kan het zichzelf herstellen.
+    </p>
+    <div class="flex flex-wrap gap-4 fade-in">
+      <a href="diensten.html" class="btn-primary">Bekijk diensten</a>
+      <a href="contact.html" class="btn-outline">Gratis kennismaking</a>
+    </div>
+  </div>
+</section>
+
+<!-- INTRO STRIP -->
+<section class="bg-white py-16">
+  <div class="max-w-4xl mx-auto px-6 text-center">
+    <p class="text-greige tracking-[0.2em] uppercase text-xs font-medium mb-5">Holistische begeleiding</p>
+    <h2 class="font-serif text-3xl text-textdark mb-6 fade-in">Elke sessie begint met afstemming</h2>
+    <p class="text-textmid leading-relaxed max-w-2xl mx-auto fade-in">
+      Ik kijk en voel wat er op dat moment nodig is — lichamelijk, emotioneel en energetisch. Geen protocollen, geen snelle oplossingen. Alleen zachtheid, aandacht en structurele steun.
+    </p>
+  </div>
+</section>
+
+<!-- DIENSTEN CARDS -->
+<section class="py-20 px-6">
+  <div class="max-w-5xl mx-auto">
+    <p class="text-greige tracking-[0.2em] uppercase text-xs font-medium mb-4 text-center">Behandelingen</p>
+    <h2 class="font-serif text-3xl text-textdark mb-12 text-center fade-in">Mijn diensten</h2>
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+
+      <a href="diensten.html#massages" class="service-card p-8 cursor-pointer">
+        <div class="w-10 h-10 mb-5 flex items-center justify-center">
+          <svg class="w-8 h-8 text-greige" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"/></svg>
+        </div>
+        <h3 class="font-serif text-xl text-textdark mb-3">Massages</h3>
+        <p class="text-textmid text-sm leading-relaxed">Reiki, shiatsu en holistische massage — ondersteund door aromatherapie, klankschaal en speciale muziek die op trillingsniveau werkt.</p>
+      </a>
+
+      <a href="diensten.html#thetahealing" class="service-card p-8 cursor-pointer">
+        <div class="w-10 h-10 mb-5 flex items-center justify-center">
+          <svg class="w-8 h-8 text-greige" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z"/></svg>
+        </div>
+        <h3 class="font-serif text-xl text-textdark mb-3">Thetahealing</h3>
+        <p class="text-textmid text-sm leading-relaxed">Inzicht in patronen en overtuigingen die jou onbewust stress bezorgen — en healing ervan op een diepe, energetische laag.</p>
+      </a>
+
+      <a href="diensten.html#transformatiespel" class="service-card p-8 cursor-pointer">
+        <div class="w-10 h-10 mb-5 flex items-center justify-center">
+          <svg class="w-8 h-8 text-greige" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M14.828 14.828a4 4 0 01-5.656 0M9 10h.01M15 10h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+        </div>
+        <h3 class="font-serif text-xl text-textdark mb-3">Transformatiespel</h3>
+        <p class="text-textmid text-sm leading-relaxed">Een transformerende ervaring met diepe inzichten, op een veilige en liefdevolle manier begeleid. Individueel of in kleine groep.</p>
+      </a>
+
+      <a href="diensten.html#begeleiding" class="service-card p-8 cursor-pointer">
+        <div class="w-10 h-10 mb-5 flex items-center justify-center">
+          <svg class="w-8 h-8 text-greige" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0z"/></svg>
+        </div>
+        <h3 class="font-serif text-xl text-textdark mb-3">Persoonlijke begeleiding</h3>
+        <p class="text-textmid text-sm leading-relaxed">Traject van 4 weken met 4 sessies van 60–90 minuten, afgestemd op jouw thema's. Combinatie van verschillende technieken.</p>
+      </a>
+
+      <a href="contact.html" class="service-card p-8 cursor-pointer bg-cream">
+        <div class="w-10 h-10 mb-5 flex items-center justify-center">
+          <svg class="w-8 h-8 text-greige" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z"/></svg>
+        </div>
+        <h3 class="font-serif text-xl text-textdark mb-3">Gratis kennismaking</h3>
+        <p class="text-textmid text-sm leading-relaxed">Nieuwsgierig of dit bij jou past? Plan een gratis kennismakingsgesprek van 30 minuten — online of live in Megen.</p>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- FOTO SECTIE -->
+<section class="bg-white py-20 px-6">
+  <div class="max-w-5xl mx-auto">
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
+      <div class="fade-in">
+        <p class="text-greige tracking-[0.2em] uppercase text-xs font-medium mb-4">Wie ben ik</p>
+        <h2 class="font-serif text-3xl text-textdark mb-6">Olga van Vugt</h2>
+        <p class="text-textmid leading-relaxed mb-4">
+          Ik weet hoe het is om te veel te dragen. Jarenlang stond ik 'aan': werk, gezin, zorgen, verwachtingen. Mijn lichaam was moe, mijn hoofd vol en ik voelde mezelf verdwijnen.
+        </p>
+        <p class="text-textmid leading-relaxed mb-8">
+          Massage, routine en lichaamsgerichte ontspanning brachten mij terug in mijn lijf — rustig, aanwezig, stevig. Nu begeleid ik mensen die hetzelfde ervaren.
+        </p>
+        <a href="over-mij.html" class="btn-outline">Lees meer over mij</a>
+      </div>
+      <div class="relative fade-in">
+        <img src="images/olga_portret1.jpg" alt="Olga van Vugt" class="w-full h-96 object-cover object-top rounded-sm shadow-card">
+        <div class="absolute -bottom-4 -left-4 w-24 h-24 bg-greylight rounded-sm hidden md:block"></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- VOOR WIE -->
+<section class="py-20 px-6">
+  <div class="max-w-4xl mx-auto">
+    <p class="text-greige tracking-[0.2em] uppercase text-xs font-medium mb-4 text-center">Voor wie</p>
+    <h2 class="font-serif text-3xl text-textdark mb-12 text-center fade-in">Deze praktijk is voor jou als…</h2>
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-4 max-w-2xl mx-auto">
+      <div class="flex items-start gap-3 p-4 fade-in">
+        <span class="text-greige mt-0.5">
+          <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>
+        </span>
+        <p class="text-textmid text-sm leading-relaxed">je geen snelle oplossingen zoekt</p>
+      </div>
+      <div class="flex items-start gap-3 p-4 fade-in">
+        <span class="text-greige mt-0.5">
+          <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>
+        </span>
+        <p class="text-textmid text-sm leading-relaxed">je in deze hectische wereld de regie over je eigen leven wil</p>
+      </div>
+      <div class="flex items-start gap-3 p-4 fade-in">
+        <span class="text-greige mt-0.5">
+          <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>
+        </span>
+        <p class="text-textmid text-sm leading-relaxed">je voelt dat je lichaam meer kan dan vaak wordt aangenomen</p>
+      </div>
+      <div class="flex items-start gap-3 p-4 fade-in">
+        <span class="text-greige mt-0.5">
+          <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>
+        </span>
+        <p class="text-textmid text-sm leading-relaxed">je bewust naar de oorzaak wil kijken in plaats van een symptoom te bestrijden</p>
+      </div>
+      <div class="flex items-start gap-3 p-4 fade-in">
+        <span class="text-greige mt-0.5">
+          <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>
+        </span>
+        <p class="text-textmid text-sm leading-relaxed">je bereid bent jezelf beter te leren kennen</p>
+      </div>
+      <div class="flex items-start gap-3 p-4 fade-in">
+        <span class="text-greige mt-0.5">
+          <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>
+        </span>
+        <p class="text-textmid text-sm leading-relaxed">je open en nieuwsgierig bent</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FOTO GALERIJ -->
+<section class="bg-white py-20 px-6">
+  <div class="max-w-5xl mx-auto">
+    <p class="text-greige tracking-[0.2em] uppercase text-xs font-medium mb-4 text-center">De praktijk</p>
+    <h2 class="font-serif text-3xl text-textdark mb-10 text-center fade-in">Een warme, rustige plek voor jezelf</h2>
+    <div class="grid grid-cols-2 md:grid-cols-3 gap-3">
+      <div class="overflow-hidden rounded-sm cursor-pointer" onclick="openLightbox(this)">
+        <img src="images/20230731_183937.jpg" alt="Praktijkruimte" class="w-full h-48 md:h-64 object-cover hover:scale-105 transition-transform duration-500" loading="lazy">
+      </div>
+      <div class="overflow-hidden rounded-sm cursor-pointer" onclick="openLightbox(this)">
+        <img src="images/20230806_113402.jpg" alt="Behandelruimte" class="w-full h-48 md:h-64 object-cover hover:scale-105 transition-transform duration-500" loading="lazy">
+      </div>
+      <div class="overflow-hidden rounded-sm cursor-pointer" onclick="openLightbox(this)">
+        <img src="images/olga_portret2.jpg" alt="Olga van Vugt" class="w-full h-48 md:h-64 object-cover object-top hover:scale-105 transition-transform duration-500" loading="lazy">
+      </div>
+      <div class="overflow-hidden rounded-sm cursor-pointer" onclick="openLightbox(this)">
+        <img src="images/20190914_204215.jpg" alt="Behandeling" class="w-full h-48 md:h-64 object-cover hover:scale-105 transition-transform duration-500" loading="lazy">
+      </div>
+      <div class="overflow-hidden rounded-sm cursor-pointer col-span-2 md:col-span-1" onclick="openLightbox(this)">
+        <img src="images/20190606_192742-effects.jpg" alt="Sfeer" class="w-full h-48 md:h-64 object-cover hover:scale-105 transition-transform duration-500" loading="lazy">
+      </div>
+      <div class="overflow-hidden rounded-sm cursor-pointer hidden md:block" onclick="openLightbox(this)">
+        <img src="images/olga_portret3.jpg" alt="Olga van Vugt" class="w-full h-48 md:h-64 object-cover object-top hover:scale-105 transition-transform duration-500" loading="lazy">
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- REVIEWS -->
+<section class="py-20 px-6">
+  <div class="max-w-5xl mx-auto">
+    <p class="text-greige tracking-[0.2em] uppercase text-xs font-medium mb-4 text-center">Ervaringen</p>
+    <h2 class="font-serif text-3xl text-textdark mb-12 text-center fade-in">Wat mensen zeggen</h2>
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+      <div class="review-card fade-in">
+        <p class="text-textmid text-sm leading-relaxed mb-5 italic">"Ik ben nu een paar maanden verder en voel me veel anders, positiever! Ik raad de theta healing bij Olga aan iedereen aan!"</p>
+        <p class="text-greige text-xs font-medium tracking-widest uppercase">Janneke</p>
+      </div>
+      <div class="review-card fade-in">
+        <p class="text-textmid text-sm leading-relaxed mb-5 italic">"Dank voor vanochtend, een heel bijzondere sessie met jou! Ik ben zo blij om in je liefdevolle energie te zijn."</p>
+        <p class="text-greige text-xs font-medium tracking-widest uppercase">Marina</p>
+      </div>
+      <div class="review-card fade-in">
+        <p class="text-textmid text-sm leading-relaxed mb-5 italic">"Met theta ga je vanuit de gezonde staat en van daaruit kijken wat er ontbreekt. Dat meditatieve staat heb ik echt nodig. Bedankt! En ga zo door!"</p>
+        <p class="text-greige text-xs font-medium tracking-widest uppercase">Linda</p>
+      </div>
+      <div class="review-card fade-in">
+        <p class="text-textmid text-sm leading-relaxed mb-5 italic">"Het was wel een heel kort maar prachtig avontuur. Ik ga een stuk wijzer verder op mijn levenspad. Dank je wel Olga voor je begeleiding."</p>
+        <p class="text-greige text-xs font-medium tracking-widest uppercase">Jeanette</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CTA -->
+<section class="bg-white py-24 px-6 text-center">
+  <div class="max-w-2xl mx-auto fade-in">
+    <p class="text-greige tracking-[0.2em] uppercase text-xs font-medium mb-5">Een uitnodiging</p>
+    <h2 class="font-serif text-3xl text-textdark mb-6">Jij verdient rust.<br>Jij verdient jezelf.</h2>
+    <p class="text-textmid leading-relaxed mb-10">
+      Niet om gefixt te worden — maar om in balans te komen. Als dit je aanspreekt, ben je welkom.
+    </p>
+    <div class="flex flex-wrap gap-4 justify-center">
+      <a href="contact.html" class="btn-primary">Plan je kennismaking</a>
+      <a href="tarieven.html" class="btn-outline">Bekijk tarieven</a>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="bg-textdark text-white py-16 px-6">
+  <div class="max-w-5xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-10">
+    <div>
+      <img src="images/transparent_logo.png" alt="Helderheid" class="h-10 mb-4 brightness-0 invert opacity-70">
+      <p class="text-greymid text-sm leading-relaxed">Holistische begeleiding<br>in Megen, Noord-Brabant.</p>
+    </div>
+    <div>
+      <h4 class="font-serif text-lg mb-5 text-white/90">Diensten</h4>
+      <ul class="space-y-2 text-greymid text-sm">
+        <li><a href="diensten.html#massages" class="hover:text-greige transition-colors">Massages (reiki, shiatsu, holistisch)</a></li>
+        <li><a href="diensten.html#thetahealing" class="hover:text-greige transition-colors">Thetahealing</a></li>
+        <li><a href="diensten.html#transformatiespel" class="hover:text-greige transition-colors">Transformatiespel</a></li>
+        <li><a href="diensten.html#begeleiding" class="hover:text-greige transition-colors">Persoonlijke begeleiding</a></li>
+      </ul>
+    </div>
+    <div>
+      <h4 class="font-serif text-lg mb-5 text-white/90">Contact</h4>
+      <ul class="space-y-2 text-greymid text-sm">
+        <li>Burg. v/d Ackerstraat 13</li>
+        <li>5366BW Megen</li>
+        <li><a href="mailto:olga@helderheid.blog" class="hover:text-greige transition-colors">olga@helderheid.blog</a></li>
+        <li><a href="https://api.whatsapp.com/send?phone=31610567970" class="hover:text-greige transition-colors">WhatsApp: 06-10567970</a></li>
+        <li class="pt-2 text-greymid/60 text-xs">KvK 71120262</li>
+      </ul>
+    </div>
+  </div>
+  <div class="max-w-5xl mx-auto mt-12 pt-6 border-t border-white/10 flex flex-col md:flex-row justify-between items-center gap-4 text-greymid/50 text-xs">
+    <p>© 2025 Praktijk Helderheid. Alle rechten voorbehouden.</p>
+    <p>Gebouwd door <a href="https://www.code-lieshout.nl" class="hover:text-greige transition-colors">Code Lieshout</a></p>
+  </div>
+</footer>
+
+<!-- LIGHTBOX -->
+<div id="lightbox" class="fixed inset-0 bg-black/90 z-50 hidden items-center justify-center p-4" onclick="closeLightbox()">
+  <img id="lightbox-img" src="" alt="" class="max-w-full max-h-full object-contain rounded">
+  <button class="absolute top-6 right-6 text-white/70 hover:text-white" onclick="closeLightbox()">
+    <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/></svg>
+  </button>
+</div>
+
+<script>
+  // Mobile menu
+  document.getElementById('menu-btn').addEventListener('click', () => {
+    document.getElementById('mobile-menu').classList.toggle('open');
+  });
+
+  // Fade in on scroll
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(e => { if(e.isIntersecting) e.target.classList.add('visible'); });
+  }, { threshold: 0.1 });
+  document.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
+
+  // Lightbox
+  function openLightbox(el) {
+    const img = el.querySelector('img');
+    document.getElementById('lightbox-img').src = img.src;
+    document.getElementById('lightbox').classList.remove('hidden');
+    document.getElementById('lightbox').classList.add('flex');
+  }
+  function closeLightbox() {
+    document.getElementById('lightbox').classList.add('hidden');
+    document.getElementById('lightbox').classList.remove('flex');
+  }
+  document.addEventListener('keydown', e => { if(e.key === 'Escape') closeLightbox(); });
+</script>
+</body>
+</html>

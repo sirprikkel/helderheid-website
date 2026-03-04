@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Over mij — Praktijk Helderheid</title>
+  <meta name="description" content="Olga van Vugt — Holistische therapeute bij Praktijk Helderheid in Megen. Lees haar verhaal en missie.">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: { extend: { colors: { cream: '#F8F7F5', greige: '#C4B5A8', greylight: '#E8E4DF', greymid: '#9CA3AF', textdark: '#2D3748', textmid: '#6B7280' }, fontFamily: { serif: ['Lora','Georgia','serif'], sans: ['Raleway','sans-serif'] }, boxShadow: { soft: '0 2px 12px rgba(0,0,0,0.06)', card: '0 4px 24px rgba(0,0,0,0.07)' } } }
+    }
+  </script>
+  <link href="https://fonts.googleapis.com/css2?family=Lora:wght@400;500;600;700&family=Raleway:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <script defer src="https://analytics.code-lieshout.nl/script.js" data-website-id="7999a3f9-a696-4855-9363-f0f0f792765e"></script>
+  <style>
+    body { font-family: 'Raleway', sans-serif; background-color: #F8F7F5; color: #2D3748; }
+    h1,h2,h3 { font-family: 'Lora', serif; }
+    .nav-link { transition: color 0.2s; }
+    .nav-link:hover { color: #C4B5A8; }
+    .btn-primary { background: #C4B5A8; color: #2D3748; border-radius: 2px; padding: 14px 32px; font-family: 'Raleway',sans-serif; font-weight: 500; letter-spacing: 0.08em; text-transform: uppercase; font-size: 0.8rem; transition: background 0.2s, transform 0.2s; display: inline-block; }
+    .btn-primary:hover { background: #B4A498; transform: translateY(-1px); }
+    .btn-outline { border: 1px solid #C4B5A8; color: #6B7280; border-radius: 2px; padding: 13px 32px; font-family: 'Raleway',sans-serif; font-weight: 500; letter-spacing: 0.08em; text-transform: uppercase; font-size: 0.8rem; transition: all 0.2s; display: inline-block; }
+    .btn-outline:hover { background: #F0EBE6; transform: translateY(-1px); }
+    .fade-in { opacity: 0; transform: translateY(20px); transition: opacity 0.6s ease, transform 0.6s ease; }
+    .fade-in.visible { opacity: 1; transform: translateY(0); }
+    #mobile-menu { display: none; }
+    #mobile-menu.open { display: flex; }
+  </style>
+</head>
+<body>
+<nav class="fixed top-0 left-0 right-0 z-50 bg-cream/95 backdrop-blur-sm border-b border-greylight">
+  <div class="max-w-5xl mx-auto px-6 flex items-center justify-between h-16">
+    <a href="index.html"><img src="images/transparent_logo.png" alt="Helderheid" class="h-9 w-auto"></a>
+    <div class="hidden md:flex items-center gap-8 text-sm font-medium tracking-widest uppercase text-textmid">
+      <a href="index.html" class="nav-link">Home</a>
+      <a href="over-mij.html" class="nav-link text-textdark">Over mij</a>
+      <a href="diensten.html" class="nav-link">Diensten</a>
+      <a href="tarieven.html" class="nav-link">Tarieven</a>
+      <a href="blog.html" class="nav-link">Blog</a>
+      <a href="contact.html" class="btn-primary">Contact</a>
+    </div>
+    <button id="menu-btn" class="md:hidden p-2">
+      <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/></svg>
+    </button>
+  </div>
+  <div id="mobile-menu" class="flex-col bg-cream border-t border-greylight px-6 py-4 gap-4 text-sm font-medium tracking-widest uppercase text-textmid">
+    <a href="index.html" class="nav-link py-2">Home</a>
+    <a href="over-mij.html" class="nav-link py-2">Over mij</a>
+    <a href="diensten.html" class="nav-link py-2">Diensten</a>
+    <a href="tarieven.html" class="nav-link py-2">Tarieven</a>
+    <a href="blog.html" class="nav-link py-2">Blog</a>
+    <a href="contact.html" class="nav-link py-2">Contact</a>
+  </div>
+</nav>
+
+<!-- PAGE HEADER -->
+<section class="pt-40 pb-20 px-6 bg-white">
+  <div class="max-w-5xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-16 items-center">
+    <div class="fade-in">
+      <p class="text-greige tracking-[0.2em] uppercase text-xs font-medium mb-4">Wie ben ik</p>
+      <h1 class="font-serif text-4xl md:text-5xl text-textdark mb-6 leading-tight">Olga van Vugt</h1>
+      <p class="text-textmid text-lg font-light leading-relaxed">
+        Holistische therapeute bij Praktijk Helderheid in Megen.
+      </p>
+    </div>
+    <div class="relative fade-in">
+      <img src="images/olga_portret1.jpg" alt="Olga van Vugt" class="w-full h-[500px] object-cover object-top rounded-sm shadow-card">
+      <div class="absolute -bottom-4 -right-4 w-20 h-20 bg-greylight rounded-sm hidden md:block"></div>
+    </div>
+  </div>
+</section>
+
+<!-- VERHAAL -->
+<section class="py-20 px-6">
+  <div class="max-w-3xl mx-auto">
+    <div class="mb-14 fade-in">
+      <h2 class="font-serif text-2xl text-textdark mb-6">Waarom ik dit werk doe</h2>
+      <p class="text-textmid leading-relaxed mb-4">
+        Soms vraagt het leven alles van je. Van jongs af aan stond ik oog in oog met verlies, trauma en het gevoel er alleen voor te staan. Ik verloor mijn tweelingbroer nog vóór onze geboorte, verloor mijn vader, had een afstandelijke moeder, overleefde meerdere levensbedreigende situaties, leefde in onveiligheid, burn-outs, intense verhuizingen en een leven vol rollen die nooit écht bij me pasten.
+      </p>
+      <p class="text-textmid leading-relaxed mb-4">
+        Maar diep vanbinnen bleef één verlangen branden: begrijpen waarom we hier zijn — en hoe we echt kunnen helen.
+      </p>
+      <p class="text-textmid leading-relaxed">
+        In plaats van te breken, ben ik gaan zoeken. Ik doorliep een lange weg van persoonlijke ontwikkeling en spiritueel ontwaken. Ik werkte jarenlang in het bedrijfsleven, onderwees talen, begeleidde mensen uit allerlei culturen, én… ik bleef leren. Over energie, het lichaam, trauma, heling en bewustzijn. Alles wat ik vandaag geef, heb ik geleerd en zelf geleefd.
+      </p>
+    </div>
+
+    <div class="bg-white rounded-sm p-10 shadow-soft mb-14 fade-in">
+      <h2 class="font-serif text-2xl text-textdark mb-6">Waarom komen mensen bij mij?</h2>
+      <p class="text-textmid leading-relaxed mb-4">
+        Mensen voelen zich bij mij gezien, veilig en op hun gemak. Dat is geen toeval. Ik combineer mijn intuïtieve vermogens met mijn uitgebreide levenservaring, een diepe menselijke wijsheid én professionele kennis.
+      </p>
+      <p class="text-textmid leading-relaxed">
+        Of je nu komt voor een massage, een diepgaande sessie, het transformatiespel of een persoonlijk traject — je wordt ontvangen door iemand die jouw pijn kent. Geen maskers, geen snelle oplossingen, maar oprechte aandacht van een vrouw die weet hoe het is om vast te zitten… én hoe het voelt om eindelijk vrij te ademen.
+      </p>
+    </div>
+
+    <div class="mb-14 fade-in">
+      <h2 class="font-serif text-2xl text-textdark mb-6">Mijn missie</h2>
+      <blockquote class="border-l-2 border-greige pl-8 py-2">
+        <p class="text-textdark text-lg font-light leading-relaxed font-serif italic">
+          "Ik geloof dat we pas echt kunnen thuiskomen in onszelf als we leren luisteren naar lichaam, geest en ziel. Zodat je niet langer overleeft, maar leeft. Met rust in je hoofd, energie in je lijf en vertrouwen in je pad."
+        </p>
+        <footer class="mt-4 text-greige text-xs tracking-widest uppercase font-medium">— Olga van Vugt</footer>
+      </blockquote>
+    </div>
+  </div>
+</section>
+
+<!-- FOTO -->
+<section class="bg-white py-20 px-6">
+  <div class="max-w-5xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-6">
+    <img src="images/olga_portret2.jpg" alt="Olga van Vugt" class="w-full h-80 object-cover object-top rounded-sm shadow-soft fade-in">
+    <img src="images/olga_portret3.jpg" alt="Olga van Vugt" class="w-full h-80 object-cover object-top rounded-sm shadow-soft fade-in">
+  </div>
+</section>
+
+<!-- CTA -->
+<section class="py-20 px-6 text-center">
+  <div class="max-w-xl mx-auto fade-in">
+    <h2 class="font-serif text-3xl text-textdark mb-6">Maak kennis</h2>
+    <p class="text-textmid leading-relaxed mb-10">Plan een gratis kennismakingsgesprek van 30 minuten. Gewoon jezelf zijn, meer is niet nodig.</p>
+    <a href="contact.html" class="btn-primary">Plan gratis kennismaking</a>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="bg-textdark text-white py-16 px-6">
+  <div class="max-w-5xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-10">
+    <div><img src="images/transparent_logo.png" alt="Helderheid" class="h-10 mb-4 brightness-0 invert opacity-70"><p class="text-greymid text-sm leading-relaxed">Holistische begeleiding<br>in Megen, Noord-Brabant.</p></div>
+    <div><h4 class="font-serif text-lg mb-5 text-white/90">Diensten</h4><ul class="space-y-2 text-greymid text-sm"><li><a href="diensten.html#massages" class="hover:text-greige transition-colors">Massages</a></li><li><a href="diensten.html#thetahealing" class="hover:text-greige transition-colors">Thetahealing</a></li><li><a href="diensten.html#transformatiespel" class="hover:text-greige transition-colors">Transformatiespel</a></li><li><a href="diensten.html#begeleiding" class="hover:text-greige transition-colors">Persoonlijke begeleiding</a></li></ul></div>
+    <div><h4 class="font-serif text-lg mb-5 text-white/90">Contact</h4><ul class="space-y-2 text-greymid text-sm"><li>Burg. v/d Ackerstraat 13, 5366BW Megen</li><li><a href="mailto:olga@helderheid.blog" class="hover:text-greige transition-colors">olga@helderheid.blog</a></li><li><a href="https://api.whatsapp.com/send?phone=31610567970" class="hover:text-greige transition-colors">WhatsApp: 06-10567970</a></li></ul></div>
+  </div>
+  <div class="max-w-5xl mx-auto mt-10 pt-6 border-t border-white/10 flex flex-col md:flex-row justify-between items-center gap-4 text-greymid/50 text-xs">
+    <p>© 2025 Praktijk Helderheid. Alle rechten voorbehouden.</p>
+    <p>Gebouwd door <a href="https://www.code-lieshout.nl" class="hover:text-greige transition-colors">Code Lieshout</a></p>
+  </div>
+</footer>
+<script>
+  document.getElementById('menu-btn').addEventListener('click', () => { document.getElementById('mobile-menu').classList.toggle('open'); });
+  const observer = new IntersectionObserver((entries) => { entries.forEach(e => { if(e.isIntersecting) e.target.classList.add('visible'); }); }, { threshold: 0.1 });
+  document.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
+</script>
+</body>
+</html>
